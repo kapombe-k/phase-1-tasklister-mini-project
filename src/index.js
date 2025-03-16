@@ -1,30 +1,28 @@
-document.addEventListener("DOMContentLoaded", function ()) {
-  
-  const button = document.querySelector('create-new task');
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector("#create-new-task"); // Corrected selector to use ID
 
-  button.addEventListener('click', function ()) {
-    console.log('Task created!')
-  }
+  button.addEventListener("click", function () {
+    console.log("Task created!");
+  });
   const list = [];
-  
-  const taskList = document.getElementById('tasks');
+  const taskList = document.getElementById("tasks");
 
-  list.forEach(task) 
-    //create a dynamic list using DOM
-    const li = document.createElement('li');
+  list.forEach(function (task) {
+    // Added function keyword and fixed syntax
+    // Create a dynamic list using DOM
+    const li = document.createElement("li");
     li.innerText = task;
 
-  //attach the added item into the list
-  taskList.appendChild(li);
-  };
-    const taskList = [];
+    // Attach the added item into the list
+    taskList.appendChild(li);
+  });
 
-    const addTask = document.querySelector('new-task-description');
-    addTask.addEventListener('click', ()) {
-  const listItem = document.getElementById('new-task-description').value;
+  const addTask = document.querySelector("#new-task-description"); // Corrected selector to use ID
+  addTask.addEventListener("click", function () {
+    // Fixed syntax
+    const listItem = document.getElementById("new-task-description").value;
 
-  taskList.push(listItem);
-  console.log(taskList);
-}
-}
-
+    taskList.push(listItem);
+    console.log(taskList);
+  });
+});
