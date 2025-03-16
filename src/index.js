@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //to get input values
   const taskInput = addTask.value;
+
   
   // const list = []; commented out for now
 
@@ -28,4 +29,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     taskList.appendChild(li);
   });
-});
+;
