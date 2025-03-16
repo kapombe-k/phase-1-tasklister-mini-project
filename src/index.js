@@ -1,12 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById('create-task-form'); // Corrected selector to use getelementbyID
-  const addTask = document.querySelector("#new-task-description"); // Corrected selector to use ID
+  const form = document.getElementById('create-task-form'); // Corrected selector to use getelementbyID for form
+  const addTask = document.querySelector("#new-task-description"); // Corrected selector to use ID for input field
+  const taskList = document.getElementById("tasks");//task container selection
 
-  button.addEventListener("click", function () {
-    console.log("Task created!");
+  form.addEventListener('submit', function (event) {   //changed from buttom to form to match first variable
+    event.preventDefault();  //prevent reload during submission
   });
-  const list = [];
-  const taskList = document.getElementById("tasks");
+
+  //to get input values
+  const taskInput = addTask.value;
+  
+  // const list = []; commented out for now
 
   list.forEach(function (task) {
     // Added function keyword and fixed syntax
