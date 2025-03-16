@@ -12,16 +12,20 @@ document.addEventListener("DOMContentLoaded", function () {
   
   // const list = []; commented out for now
 
-  // Added function keyword and fixed syntax
-  list.forEach(function (task) {
-    // Create a dynamic list using DOM
+  // Added function keyword and fixed syntax for task list
+  function addTaskToList(taskInput){
+    // Create a dynamic list using DOM to add and remove tasks
     const li = document.createElement("li");
     li.innerText = taskInput;//list items text
 
-    
+    //delete task button
+    const deleteButton = document.createElement('button');
+    deleteButton.innerText = 'Remove';
+    deleteButton.addEventListener('click', function () {
+      li.remove();
+    });
+    li.appendChild(deleteButton);//delete button at end of task
+
     taskList.appendChild(li);
-  
-    taskList.push(listItem);
-    console.log(taskList);
   });
 });
