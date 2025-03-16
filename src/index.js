@@ -34,5 +34,4 @@ function addTaskToList(taskInput){
   li.appendChild(deleteButton);//delete button at end of task
   
   taskList.appendChild(li);
-});
-;
+};
