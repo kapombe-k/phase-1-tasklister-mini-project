@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const button = document.querySelector("#create-new-task"); // Corrected selector to use ID
+  const form = document.getElementById('create-task-form'); // Corrected selector to use getelementbyID
+  const addTask = document.querySelector("#new-task-description"); // Corrected selector to use ID
 
   button.addEventListener("click", function () {
     console.log("Task created!");
@@ -16,8 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Attach the added item into the list
     taskList.appendChild(li);
   });
-
-  const addTask = document.querySelector("#new-task-description"); // Corrected selector to use ID
   addTask.addEventListener("click", function () {
     // Fixed syntax
     const listItem = document.getElementById("new-task-description").value;
