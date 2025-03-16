@@ -12,19 +12,15 @@ document.addEventListener("DOMContentLoaded", function () {
   
   // const list = []; commented out for now
 
+  // Added function keyword and fixed syntax
   list.forEach(function (task) {
-    // Added function keyword and fixed syntax
     // Create a dynamic list using DOM
     const li = document.createElement("li");
-    li.innerText = task;
+    li.innerText = taskInput;//list items text
 
-    // Attach the added item into the list
+    
     taskList.appendChild(li);
-  });
-  addTask.addEventListener("click", function () {
-    // Fixed syntax
-    const listItem = document.getElementById("new-task-description").value;
-
+  
     taskList.push(listItem);
     console.log(taskList);
   });
