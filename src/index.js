@@ -16,9 +16,24 @@ document.addEventListener("DOMContentLoaded", function () {
     //to reset input
     taskForm.reset();//works with extensive forms
 
+    renderToDoList(toDoList);
+
     console.log(toDoList);//debug log
 
   });  
 });
+
+function renderToDoList(todos) {
+  const unorderedListElement = document.getElementById("tasks");
+
+  //iterate over todos
+  todos.forEach((todo) => {
+    const li = document.createElement('li');
+    li.textContent = todo;
+
+    //attach li item
+    unorderedListElement.appendChild(li); 
+  })
+};
 
 
