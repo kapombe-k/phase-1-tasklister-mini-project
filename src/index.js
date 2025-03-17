@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     taskForm.reset();
 
     //iterate through array and outputs
-    renderToDoList(toDoList)
+    renderToDoList(toDoList);
   });
 
 
