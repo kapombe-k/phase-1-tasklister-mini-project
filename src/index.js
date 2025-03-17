@@ -26,10 +26,20 @@ document.addEventListener("DOMContentLoaded", function () {
 function renderToDoList(todos) {
   const unorderedListElement = document.getElementById("tasks");
 
+  unorderedListElement.innerHTML = '';
+
   //iterate over todos
   todos.forEach((todo) => {
     const li = document.createElement('li');
     li.textContent = todo;
+
+    //delete button
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Remove';
+    deleteButton.addEventListener('click', function () {
+      li.remove();
+    });
+    li.appendChild(deleteButton);
 
     //attach li item
     unorderedListElement.appendChild(li); 
