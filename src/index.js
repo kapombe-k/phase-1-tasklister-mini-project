@@ -7,7 +7,14 @@ document.addEventListener("DOMContentLoaded", function () {
   taskForm.addEventListener('submit', function (event) {   //changed from buttom to form to match first variable
     event.preventDefault();  //prevent reload during submission
 
-    console.log('working');
+    //retrieval logic resides here
+
+    const taskInputText = document.querySelector("#new-task-description").value.trim();
+
+    toDoList.push(taskInputText);//adds input to array
+
+    console.log(toDoList);
+
   });  
 
 });
