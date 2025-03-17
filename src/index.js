@@ -9,12 +9,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //retrieval logic resides here
 
-    const taskInputText = document.querySelector("#new-task-description").value.trim();
+    const taskInput = document.querySelector("#new-task-description");
 
-    toDoList.push(taskInputText);//adds input to array
+    toDoList.push(taskInput.value.trim());//adds input to array
 
-    console.log(toDoList);
+    //to reset input
+    taskForm.reset();//works with extensive forms
+
+    console.log(toDoList);//debug log
 
   });  
-
 });
+
+
